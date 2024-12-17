@@ -81,7 +81,8 @@ DATABASES = {
         'USER':'admin',
         'PASSWORD':'admin1234',
         'HOST':'mysql-db.cjw66ysymx0u.ap-northeast-2.rds.amazonaws.com',  # RDS 엔드포인트
-        'PORT':'3306'
+        'PORT':'3306',
+        'default-character-set' : 'utf8',
     }
 }
 
