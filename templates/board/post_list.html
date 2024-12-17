@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'chat_bot.css' %}" rel="stylesheet">
+    <script src="{% static 'jquery-3.7.1.min.js' %}" ></script>
 </head>
 <body>
-    <ul>
-        {% for post in posts %}
-        <li>
-            <a  href="{% url 'post_detail' pk=post.pk %}"  >{{post.title}}</a> - {{post.author}} ({{post.created_at}})
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="container my-5">
+        <ul>
+            {% for post in posts %}
+            <li>
+                <a  href="{% url 'post_detail' pk=post.pk %}"  >{{post.title}}</a> - {{post.author}} ({{post.created_at}})
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
