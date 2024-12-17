@@ -124,9 +124,9 @@ import os
 STATIC_URL = 'static/'
 
 # STATIC_ROOT 배포용 디렉터리
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = BASE_DIR / 'static'
 
-# 개발중에 사용할 정적파일 경로
+# 개발중에 사용할 정적파일 경로:
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
